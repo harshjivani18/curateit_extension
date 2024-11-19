@@ -1,0 +1,64 @@
+.ct-relative{
+    position: relative !important;
+}
+
+.button-menu-edit{
+        align-items: center;
+        background-color: white;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        display: none;
+        /* left: 0px; */
+        padding: 5px 10px;
+        /* position: absolute; */
+        /* top: 0px; */
+        width: 200px;
+        z-index: 9999;
+        justify-content: space-between;
+        box-shadow: 0 0 0 0.5px rgb(0 0 0 / 15%), 0 0.5px 0 rgb(0 0 0 / 10%), 0 6px 12px rgb(0 0 0 / 10%), 0 10px 20px rgb(0 0 0 / 5%) !important;
+    }
+
+.yellowSpan {
+    width: 14px;
+    height: 14px;
+    left: 37px;
+    top: 7px;
+    background: #FFFAB3;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 50%
+}
+
+.greenSpan {
+    width: 14px;
+    height: 14px;
+    left: 37px;
+    top: 7px;
+    background: #D2F9C8;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 50%
+}
+
+.redSpan {
+    width: 14px;
+    height: 14px;
+    left: 37px;
+    top: 7px;
+    background: #FFAFED;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 50%
+}
+
+.violetSpan {
+    width: 14px;
+    height: 14px;
+    left: 37px;
+    top: 7px;
+    background: #C1C1FF;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    border-radius: 50%
+}
+
+.span-flex{
+    display: flex;
+}

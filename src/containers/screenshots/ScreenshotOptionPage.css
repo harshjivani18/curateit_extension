@@ -1,0 +1,28 @@
+.screenshot_tab-option ul{
+    flex-wrap: wrap;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.screenshot_tab-option ul li{
+    width: 100%;
+}
+.screenshot_tab-option ul li label{
+    width: 100%;
+    /* min-height: unset; */
+    display: flex;
+    align-items: center;
+    padding: 16px 16px;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 8px;
+}
+.screenshot_tab-option ul li label .video_tab_img{
+    margin-bottom: 0;
+    margin-right: 10px;
+    width: fit-content;
+}
+
+.ct-ant-modal .ant-modal-footer .ant-btn-primary {
+    background-color: #1890ff !important;
+}

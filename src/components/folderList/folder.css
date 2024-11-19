@@ -1,0 +1,29 @@
+/* .TreeNode{
+    margin-left: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+} */
+
+.ant-tree .ant-tree-node-content-wrapper .ant-tree-iconEle{
+    margin-top: 5px;
+}
+.ant-tree .ant-tree-node-content-wrapper .ant-tree-iconEle {
+line-height: 10px;
+}
+.ant-tree .ant-tree-node-content-wrapper {
+width: 290px;
+}
+
+.ant-tree-list .ant-tree-draggable-icon{
+    display: none;
+}
+
+.folder-tree-structure .ant-tree-list .ant-tree-list-holder-inner .ant-tree-treenode {
+    width: 100%;
+}
+
+.folder-tree-structure .ant-tree-list .ant-tree-list-holder-inner .ant-tree-treenode .ant-tree-node-content-wrapper {
+    width: 100%;
+}

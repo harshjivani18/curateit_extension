@@ -1,0 +1,7 @@
+export const ADD_CODE = 'ADD_CODE'
+export const GET_ALL_CODES = 'GET_ALL_CODES'
+export const UPDATE_CODE = 'UPDATE_CODE'
+export const DELETE_CODE = 'DELETE_CODE'
+export const GET_SINGLE_CODE = 'GET_SINGLE_CODE'
+export const GET_SINGLE_CODE_RESET = 'GET_SINGLE_CODE_RESET'
+export const UPDATE_CODE_TO_GEM = 'UPDATE_CODE_TO_GEM'

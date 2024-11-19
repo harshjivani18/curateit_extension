@@ -1,0 +1,15 @@
+export const FETCH_GEM = 'FETCH_GEM'
+export const ADD_GEM = 'ADD_GEM'
+export const ADD_GEM_RESET = 'ADD_GEM_RESET'
+export const UPDATE_GEM = 'UPDATE_GEM'
+export const UPDATE_GEM_RESET = 'UPDATE_GEM_RESET'
+export const IMPORT_GEM = 'IMPORT_GEM'
+export const IMPORT_GEM_RESET = 'IMPORT_GEM_RESET'
+export const ERROR_MSG = "ERROR_MSG";
+export const SUCCESS_MSG = "SUCCESS_MSG";
+export const DISABLE_MSG = 'DISABLE_MSG'
+export const DELETEGEM = 'DELETEGEM'
+export const SET_CURRENT_GEM = "SET_CURRENT_GEM"
+export const SET_CURRENT_MEDIA = "SET_CURRENT_MEDIA"
+export const IMPORT_GEMS_WITH_ICON = "IMPORT_GEMS_WITH_ICON"
+export const FETCH_TEXT_FROM_AUDIO = 'FETCH_TEXT_FROM_AUDIO'

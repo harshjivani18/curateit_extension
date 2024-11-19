@@ -1,0 +1,58 @@
+.ct-image-modal-btn {
+    background-color: #1890ff !important;
+}
+
+.ct-img-col {
+    height: 125px;
+    max-height: 125px;
+    text-align: center;
+}
+
+.ct-row-border {
+    border: 0.4px solid #ABB7C9;
+    border-radius: 5px;
+}
+
+.ct-img-wrapper {
+    height: 100%;
+}
+
+.ct-img {
+    height: 100%;
+}
+
+.ct-selected-thumbnail {
+    border: 2px solid #1890ff;
+}
+
+.div-icon-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    grid-gap: 1rem;
+}
+
+.div-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.div-icon>* {
+    margin-bottom: 0.5rem;
+}
+
+.ct-contents {
+    display: contents;
+}
+
+.ct-emoji-picker {
+    width: 100%;
+}
+
+.ct-color-picker {
+    width: 100%;
+}
+
+.ct-img-scale-down {
+    object-fit: scale-down;
+}

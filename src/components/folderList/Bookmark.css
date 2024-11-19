@@ -1,0 +1,5 @@
+.ct-bookmark-title-span {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

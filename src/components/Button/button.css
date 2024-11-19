@@ -1,0 +1,23 @@
+.button {
+    border: none;
+    color: white;
+    padding: 12px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+
+  .small {
+    padding: 5px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+  }
+  
+  .primary {background-color: #347AE2;} /* Blue */
+  .secondary {background-color: #e7e7e7; color: black;} /* Gray */
+  .tertiary {background-color: #fff; color: #347AE2;} /* Gray */
+  .success {background-color: #4CAF50;} /* Green */
+  .danger {background-color: #f44336;} /* Red */

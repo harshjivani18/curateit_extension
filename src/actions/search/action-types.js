@@ -1,0 +1,4 @@
+export const SEARCH_BOOKS = 'SEARCH_BOOKS'
+export const CREATE_BOOK_GEM = 'CREATE_BOOK_GEM'
+export const SEARCH_MOVIES = 'SEARCH_MOVIES'
+export const CREATE_MOVIE_GEM = 'CREATE_MOVIE_GEM'

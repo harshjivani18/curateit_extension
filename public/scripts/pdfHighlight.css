@@ -1,0 +1,27 @@
+.pdf-curateit-button {
+    border-radius: 4px;
+    background: transparent;
+    border: 1px solid #0a95ff;
+    padding: 4px 12px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+    position: fixed;
+    top: 10%;
+    right: 2%;
+    user-select: none;
+    z-index: 2147483647 !important;
+}
+
+.pdf-curateit-button:hover {
+    cursor: pointer;
+    background: #97d3dd;
+}
+
+.pdf-curateit-button-loading{
+    background-color: #0a95ff;
+    color: white;
+    height: 32px;
+}

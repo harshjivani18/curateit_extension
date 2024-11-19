@@ -1,0 +1,104 @@
+.flashCards h1 {
+	font-size: 23px !important;
+}
+
+.flashCards label {
+	display: block;
+	min-width: fit-content !important;
+	width: 470px;
+	height: 270px;
+	margin: auto;
+	perspective: 1000px;
+	transform-style: preserve-3d;
+	cursor: pointer;
+}
+
+.flip-card {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-style: preserve-3d;
+	transition: all 0.5s ease-in-out;
+	z-index: 1;
+	display: grid;
+	justify-items: center;
+}
+
+.flip-card .front,
+.flip-card .back {
+	backface-visibility: hidden;
+}
+
+.flip-card .back {
+	transform: rotateY(180deg);
+}
+
+label:hover .flip-card {
+	transform: rotateY(2deg);
+}
+
+.flashCards input {
+	display: none;
+}
+
+:checked+.flip-card {
+	transform: rotateY(180deg);
+}
+
+label:hover :checked+.flip-card {
+	transform: rotateY(175deg);
+}
+
+.flashCards hr {
+	width: 180px;
+	margin: 15px auto 10px auto;
+}
+
+
+.flashCardsWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 23px;
+}
+
+.flashCards {
+	display: flex;
+	flex-direction: column;
+	gap: 23px;
+	overflow: hidden;
+}
+
+.front,
+.back {
+	width: 100%;
+}
+
+.flip-card .front,
+.flip-card .back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	transition: transform .6s ease-in-out;
+}
+
+.flip-card .back {
+	transform: rotateY(180deg);
+}
+
+.gridView {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+	box-sizing: border-box;
+}
+
+.gridView .quiz-label {
+	width: 100% !important;
+	box-sizing: border-box;
+}
+
+.gridView p {
+	font-size: initial;
+}

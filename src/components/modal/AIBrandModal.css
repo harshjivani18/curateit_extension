@@ -1,0 +1,25 @@
+.ct-ai-brand-modal > .ant-modal-content {
+    border-radius: 8px;
+}
+
+.ct-ai-modal-title {
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    line-height: 24.2px !important;
+    color: #347AE2 !important;
+}
+
+.ct-ai-modal-label {
+    color: #292B38;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 19.36px;
+}
+
+.ct-ai-modal-footer {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 12px;
+}

@@ -1,0 +1,35 @@
+.ct-share-invite-select .ant-select-selector {
+    width: 100% !important;
+}
+.ct-share-invite-select .ant-select-selector .ant-select-selection-overflow {
+    width: 100% !important;
+}
+.ct-share-invite-select .ant-select-selector .ant-select-selection-overflow .ant-select-selection-overflow-item-suffix {
+    width: 100% !important;
+}
+.ct-share-invite-select .ant-select-selector .ant-select-selection-overflow .ant-select-selection-overflow-item-suffix .ant-select-selection-search {
+    width: 100% !important;
+}
+.ct-share-invite-select .ant-select-selector .ant-select-selection-overflow .ant-select-selection-overflow-item-suffix .ant-select-selection-search input {
+    width: 100%;
+    word-wrap: break-word;
+}
+.ct-share-member-select {
+    width: 100%;
+}
+.ct-share-member-select .ant-select-selector {
+    width: 100% !important;
+}
+.ct-share-member-select .ant-select-selector .ant-select-selection-overflow {
+    width: 100% !important;
+}
+.ct-share-member-select .ant-select-selector .ant-select-selection-overflow .ant-select-selection-overflow-item-suffix {
+    width: 100% !important;
+}
+.ct-share-member-select .ant-select-selector .ant-select-selection-overflow .ant-select-selection-overflow-item-suffix .ant-select-selection-search {
+    width: 100% !important;
+}
+.ct-share-member-select .ant-select-selector .ant-select-selection-overflow .ant-select-selection-overflow-item-suffix .ant-select-selection-search input {
+    width: 100%;
+    word-wrap: break-word;
+}

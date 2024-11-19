@@ -1,0 +1,9 @@
+.ct-tab-panel-header > .ant-collapse-header {
+    padding: 0px !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.ct-tab-panel-header > .ant-collapse-content > .ant-collapse-content-box {
+    padding: 0px !important;
+    margin-bottom: 0.5rem !important;
+}

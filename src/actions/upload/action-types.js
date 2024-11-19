@@ -1,0 +1,3 @@
+export const ADD_UPLOAD_FILE = 'ADD_UPLOAD_FILE'
+export const ADD_UPLOAD_RESET = 'ADD_UPLOAD_RESET'
+export const UPLOAD_BASE64 = "UPLOAD_BASE64"

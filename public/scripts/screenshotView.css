@@ -1,0 +1,106 @@
+.wrapperOverlayDiv {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 999999999999999999;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.contentWrapperCapture {
+    background: white;
+    border-radius: 10px;
+    width: fit-content;
+    display: grid;
+    margin: 10px auto;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    position: relative;
+}
+
+.capture-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.margin-x-10 {
+    margin: 0px 10px;
+}
+
+.margin-r-10 {
+    margin-right: 10px;
+}
+
+.close-x {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    cursor: pointer;
+}
+
+.capture-wrapper:hover {
+    background-color: #d9d9d9;
+}
+
+#full-capture-modal-wrapper {
+    display: none;
+    background-color: white;
+    padding: 10px;
+    margin: 10px auto;
+    width: fit-content;
+}
+
+#full-capture-modal-wrapper h2 {
+    margin: 0px;
+}
+
+#modal-ok,
+#modal-cancel {
+    line-height: 1.5715;
+    position: relative;
+    display: inline-block;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: center;
+    background-image: none;
+    border: 1px solid transparent;
+    box-shadow: 0 2px #00000004;
+    cursor: pointer;
+    transition: all .3s cubic-bezier(.645, .045, .355, 1);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: manipulation;
+    height: 32px;
+    padding: 4px 15px;
+    font-size: 14px;
+    border-radius: 2px;
+    color: #000000d9;
+    border-color: #d9d9d9;
+    background: #fff;
+}
+
+#modal-ok {
+    color: #fff;
+    border-color: #1890ff;
+    background: #1890ff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, .12);
+    box-shadow: 0 2px #0000000b;
+    margin-left: 10px;
+}
+
+#modal-cancel:hover {
+    color: #1890ff;
+    border-color: #1890ff;
+}

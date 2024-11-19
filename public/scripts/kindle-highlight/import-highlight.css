@@ -1,0 +1,20 @@
+#curateit-hightlight-import {
+    z-index: 100;
+    position: absolute;
+    top: 8%;
+    right: 3%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 4px;
+    background-color: white;
+    border-radius: 25px;
+    padding: 10px 15px;
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+#curateit-hightlight-import:hover {
+    background-color: rgb(245, 245, 245);
+    color: rgb(67, 67, 67)
+}

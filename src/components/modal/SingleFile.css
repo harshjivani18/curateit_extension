@@ -1,0 +1,11 @@
+.ct-single-file-btn {
+    border-radius: 250px;
+    /* color: black; */
+    width: 200px;
+    justify-content: center;
+}
+
+.ct-single-file-modal {
+    height: 200px;
+    margin-top: 150px;
+}

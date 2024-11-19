@@ -1,0 +1,11 @@
+.headingCopy {
+    display: none;
+}
+
+.headingParent:hover .headingTag{
+    display: none;
+}
+
+.headingParent:hover .headingCopy{
+    display: flex;
+}

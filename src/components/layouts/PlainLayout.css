@@ -1,0 +1,22 @@
+.close-container {
+    top: 0px;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+}
+
+.header-close-btn {
+    width: 25px;
+    height: 25px;
+}
+
+.plain-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+    height: 80vh;
+}

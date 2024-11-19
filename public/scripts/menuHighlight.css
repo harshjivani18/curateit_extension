@@ -1,0 +1,30 @@
+.ct-drawer{
+    background: white;
+    height: 100%;
+    width: 400px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 999999999999999;
+    box-shadow: 0 0 0 0.5px rgb(0 0 0 / 15%),
+        0 0.5px 0 rgb(0 0 0 / 10%),
+        0 6px 12px rgb(0 0 0 / 10%),
+        0 10px 20px rgb(0 0 0 / 5%) !important
+}
+
+.violet-hl {
+    background-color: #C1C1FF !important;
+    /* position: relative !important; */
+}
+.pink-hl {
+    background-color: #FFAFED !important;
+    /* position: relative !important; */
+}
+.green-hl {
+    background-color: #D2F9C8 !important;
+    /* position: relative !important; */
+}
+.yellow-hl {
+    background-color: #FFFAB3 !important;
+    /* position: relative !important; */
+}

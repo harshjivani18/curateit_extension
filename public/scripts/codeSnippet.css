@@ -1,0 +1,54 @@
+.menuStyle{
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 5px;
+}
+
+.btnLi{
+    list-style: none;
+}
+
+.hideLi {
+    display: none;
+    cursor: pointer !important;
+}
+
+.btnLi:hover + .hideLi {
+    display: flex !important;
+    cursor: pointer;
+    align-items: center;
+}
+
+.hideLi:hover {
+    display: flex !important;
+    cursor: pointer;
+    align-items: center;
+}
+
+.curateit-button {
+    border-radius: 4px;
+    background: transparent;
+    border: 1px solid #0a95ff;
+    padding: 4px 12px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.curateit-button:hover {
+    cursor: pointer;
+    background: #97d3dd;
+}
+
+.ct-d-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,360 @@
+<html>
+<head>
+    <style>
+        /* body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            height: 100%;
+            background-color: #f0f2f5;
+        } */
+        .ct-main-img {
+            width: 100px;
+            height: auto;
+            float: left;
+        }
+        .ct-chat-main {
+            position: absolute;
+            font-family: Arial, sans-serif;
+            font-size: 12px;
+            width: 700px;
+            border: 1px solid #e0e0e0;
+            background-color: white;
+            border-radius: 5px;
+            margin: auto;
+            top: 0px;
+            right: 0px;
+            bottom: 0px;
+            left: 0px;
+            z-index: 21474836473;
+            height: max-content;
+            transition: all 0.2s cubic-bezier(0.05, 0.03, 0.35, 1);
+            pointer-events: all;
+            cursor: all-scroll;
+        }
+        .ct-chat-container {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.12);
+            display: flex;
+            flex-direction: column;
+            /* height: calc(100% - 40px); */
+        }
+        .ct-chat-header {
+            padding: 8px;
+            border-bottom: 1px solid #e0e0e0;
+            text-align: right;
+            font-size: 11px;
+        }
+        .ct-chat-header a {
+            color: #2563eb;
+            text-decoration: none;
+        }
+        .close-icon {
+            cursor: pointer;
+            color: #9ca3af;
+            background: none;
+            border: none;
+        }
+        .close-icon svg {
+            width: 16px;
+            height: 16px;
+        }
+        .ct-chat-messages {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 12px;
+            max-height: 500px;
+            display: flex;
+            flex-direction: column;
+        }
+        .message {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            margin-top: 12px;
+        }
+        .ct-ai-question {
+            max-width: 520px;
+            margin-left: auto;
+        }
+        .avatar {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #2563eb;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            margin-right: 8px;
+            flex-shrink: 0;
+        }
+        .avatar svg {
+            width: 12px;
+            height: 12px;
+        }
+        .message-content {
+            font-size: 12px;
+            color: #1f2937;
+        }
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-top: 6px;
+            margin-left: 28px;
+        }
+        .option-button {
+            background-color: white;
+            border: 1px solid #d1d5db;
+            border-radius: 9999px;
+            padding: 2px 8px;
+            font-size: 11px;
+            color: #4b5563;
+            cursor: pointer;
+        }
+        .user-message .avatar {
+            background-color: #3b82f6;
+        }
+        .ai-response {
+            background-color: #f3f4f6;
+            border-radius: 8px;
+            padding: 8px;
+            margin-left: 2px;
+            position: relative;
+            font-size: 12px;
+        }
+        .ai-response-header {
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+        .response-actions {
+            display: flex;
+            justify-content: flex-end;
+            gap: 6px;
+            margin-top: 8px;
+        }
+        .action-button {
+            background-color: #e5e7eb;
+            border: none;
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-size: 11px;
+            color: #4b5563;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .icon-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #6b7280;
+            width: 16px;
+            height: 16px;
+            /* padding: 2px; */
+
+        }
+        .icon-button svg {
+            width: 16px;
+            height: 16px;
+        }
+        .action-button {
+            background-color: #e5e7eb;
+            border: none;
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-size: 11px;
+            color: #4b5563;
+            cursor: pointer;
+        }
+        .selected-text-container {
+            display: flex;
+            margin-top: 12px;
+            margin-left: 28px;
+        }
+        .vertical-line {
+            width: 3px;
+            background-color: #347AE2;
+            margin-right: 8px;
+            height: 12px;
+        }
+        .selected-text {
+            background-color: #e8f4fd;
+            padding: 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            color: #4b5563;
+            flex-grow: 1;
+            display: flex;
+        }
+        .selected-text-close {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            cursor: pointer;
+            color: #9ca3af;
+        }
+        .selected-text-close svg {
+            width: 12px;
+            height: 12px;
+        }
+        .selected-text-container {
+            position: relative;
+        }
+        .ct-chat-input {
+            display: flex;
+            padding: 8px;
+            border-top: 1px solid #e0e0e0;
+            align-items: center;
+        }
+        .ct-chat-input input {
+            flex-grow: 1;
+            border: 1px solid #e0e0e0;
+            border-radius: 4px;
+            padding: 6px 8px;
+            font-size: 12px;
+            margin-right: 6px;
+        }
+        .input-actions {
+            display: flex;
+            gap: 6px;
+        }
+        .input-action {
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #9ca3af;
+            font-size: 16px;
+        }
+        .send-button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .send-button svg {
+            width: 14px;
+            height: 14px;
+        }
+        .ct-morelink {
+            text-decoration: none;
+            color: #347AE2 !important;
+        }
+        .ct-chat-text-area{
+            min-height: 30px;
+            max-height: 150px;
+            width: 100%;
+            resize: none;
+            overflow-y: hidden;
+            margin-bottom: 0px;
+            margin-right: 10px;
+            height: 30px;
+        }
+        .ct-ai-user-attempt {
+            background-color: #E5F0FF;
+            color: #062046;
+        }
+        .ct-dot-typing  {
+            position: relative;
+            left: -9999px;
+            width: 5px;
+            height: 5px;
+            border-radius: 5px;
+            background-color: #347AE2;
+            color: #347AE2;
+            box-shadow: 9984px 0 0 0 #347AE2, 9999px 0 0 0 #347AE2, 10014px 0 0 0 #347AE2;
+            animation: dot-typing 1.5s infinite linear;
+        }
+
+        @keyframes dot-typing {
+            0% {
+                box-shadow: 9984px 0 0 0 #347AE2, 9999px 0 0 0 #347AE2, 10014px 0 0 0 #347AE2;
+            }
+            16.667% {
+                box-shadow: 9984px -5px 0 0 #347AE2, 9999px 0 0 0 #347AE2, 10014px 0 0 0 #347AE2;
+            }
+            33.333% {
+                box-shadow: 9984px 0 0 0 #347AE2, 9999px 0 0 0 #347AE2, 10014px 0 0 0 #347AE2;
+            }
+            50% {
+                box-shadow: 9984px 0 0 0 #347AE2, 9999px -5px 0 0 #347AE2, 10014px 0 0 0 #347AE2;
+            }
+            66.667% {
+                box-shadow: 9984px 0 0 0 #347AE2, 9999px 0 0 0 #347AE2, 10014px 0 0 0 #347AE2;
+            }
+            83.333% {
+                box-shadow: 9984px 0 0 0 #347AE2, 9999px 0 0 0 #347AE2, 10014px -5px 0 0 #347AE2;
+            }
+            100% {
+                box-shadow: 9984px 0 0 0 #347AE2, 9999px 0 0 0 #347AE2, 10014px 0 0 0 #347AE2;
+            }
+        }
+        .ct-loader-container {
+            margin-top: 12px;
+            margin-left: 12px;
+        }
+        .ct-tooltip {
+            display: none;
+            background-color: rgba(0,0,0,0.5);
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <div class="ct-chat-container">
+        <div class="ct-chat-main">
+            <div class="ct-chat-header">
+                <img src="https://d3jrelxj5ogq5g.cloudfront.net/webapp/logo1sv.svg" alt="Curateit" class="ct-main-img" />
+                <button class="close-icon" id="ct-ai-close-icon-btn">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="ct-chat-messages" id="ct-ai-chat-box-messages">
+                <div class="selected-text-container">
+                    <div class="selected-text" id="ct-ai-chat-selected-text-div">
+                        <div class="vertical-line" style="display: flex;"></div>
+                        <span style="font-weight: bold; color: #347AE2;">Context:&nbsp;</span><br />
+                        <span id="selected-prompt"></span>
+                        <span class="selected-text-close" id="ct-prompt-selected-close-btn">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 6L6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="ct-chat-input">
+                <textarea placeholder="Ask about uploaded document..." id="ct-ask-ai-input" class="ct-chat-text-area"></textarea>
+                <div class="input-actions">
+                    <!-- <button class="input-action">🎤</button>
+                    <button class="input-action">📎</button> -->
+                    <button class="send-button" id="ct-ask-ai-send-btn">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" id="ct-chat-send-icon">
+                            <path d="M22 2L11 13" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M22 2L15 22L11 13L2 9L22 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
